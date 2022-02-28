@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://chatconfoto.com</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chatconfoto.com/</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chatconfoto.com/email/verify</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chatconfoto.com/login</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chatconfoto.com/password/reset</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chatconfoto.com/register</loc>
+        <lastmod>2022-02-25T16:18:59+01:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
