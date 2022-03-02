@@ -59,7 +59,7 @@
                     </li>
                 @endforeach
             @else
-                @if(isset($this->usuarioReceptor) && $this->usuarioReceptor->images()->count())
+                @if($this->usuarioReceptor!=null && $this->usuarioReceptor->images()->count())
                     @foreach($this->usuarioReceptor->images as $key => $image)
                        <!-- lightbox  --->
                        <img src="{{ Storage::url('photos/'.$image->nombre) }}" alt="{{ $image->nombre }} style="width:100%" onclick="openModal();currentSlide({{ $key+1 }})" class="hover-shadow cursor mb-1">
