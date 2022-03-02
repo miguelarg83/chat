@@ -99,7 +99,7 @@
     @endunless
 
 
-    @if(isset($this->usuarioReceptor) && $this->usuarioReceptor->images()->count())
+    @if($this->usuarioReceptor!=null && $this->usuarioReceptor->images()->count())
     <!-- Modal lightbox -->
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
