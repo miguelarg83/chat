@@ -47,7 +47,7 @@
 
         {{-- Mostramos los usuarios del chat --}}
         <div style="height:500px;" class="col-3 col-lg-2 p-2 ml-lg-2 overflow-auto border">
-            @if($this->usuarios && session('receptor')==null)
+            @if($this->usuarios && session('receptor')=='general')
                 @foreach($this->usuarios as $key => $u)
                     <li class="d-flex flex-row" wire:key="{{ $u['id'] }}">
                         {{-- Al hacer clic sobre el nombre de algún usuario se ejecuta el método saludo que recibe el id de dicho usuario al que clicamos --}}
