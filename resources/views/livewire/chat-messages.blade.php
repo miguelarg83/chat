@@ -8,7 +8,7 @@
     <div class="row mt-4">
         <div class="col-12 offset-lg-1 col-lg-8 d-flex flex-wrap pl-12 pr-12">
             <div class="mr-2 mt-3">
-                <button wire:click="chatGeneral" type="button" @if(session('receptor')==null) class="btn btn-success" @else class="btn btn-primary" @endif>
+                <button wire:click="chatGeneral" type="button" @if(session('receptor')=='general') class="btn btn-success" @else class="btn btn-primary" @endif>
                     Chat General
                 </button>
             </div>
