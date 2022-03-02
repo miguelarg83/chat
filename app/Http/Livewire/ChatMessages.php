@@ -287,7 +287,7 @@ class ChatMessages extends Component
         if(session($saludo.'N')!=null) session()->forget($saludo.'N');
 
         if(session($saludo)!=null) session()->forget($saludo);
-        if(session('receptor')!=null && session('receptor')==$saludo) session()->forget('receptor');
+        if(session('receptor')!='general' && session('receptor')==$saludo) session()->forget('receptor');
     }
 
     /* Cuando hago click en una caja-nombre de privado de alguien se ejecuta esta función que recibe el nombre del receptor
@@ -367,7 +367,7 @@ class ChatMessages extends Component
     {
         usleep( 500000 ); // Dormir durante medio segundo
         //sleep(1); // Para que lo de Miguel escribiendo no le desaparezca tan rápido a Flor.
-        if(session('receptor')!=null)
+        if(session('receptor')!='general')
             $usuarioNombreReceptor=session('receptor');
         $usuarioIdEmisor=$this->user->id;
         $usuarioIdReceptor=User::where('name',$usuarioNombreReceptor)->value('id');
