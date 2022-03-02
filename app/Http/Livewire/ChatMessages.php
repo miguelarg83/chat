@@ -27,6 +27,8 @@ class ChatMessages extends Component
 
     public function mount()
     {
+        if(session('receptor')!=null)
+            session()->forget('receptor');
         $this->user=auth()->user();
         $this->mensajes=Message::with('user.images')->latest()->take(50)->get()->reverse(); 
         // Coge los 50 registros más nuevos y los mostramos a la inversa de como los obtenemos de la BD.
