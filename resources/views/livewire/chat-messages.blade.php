@@ -30,7 +30,7 @@
     <div class="row justify-content-center mt-2">
         {{-- Muestra los mensajes públicos y privados del chat general --}}
         <div id="divu" style="height:500px;" class="col-9 col-lg-7 p-3 overflow-y-auto list-unstyled border">
-            @if(session('receptor')==null)
+            @if(session('receptor')=='general')
                 @foreach($this->mensajes as $m)
                     <li wire:key="{{ $m->id }}">
                         <span class="font-italic font-weight-bold">{{ $m->user->name }}</span> <span class="font-weight-light">[{{ $m->created_at->format('d-m-y | h:i') }}]</span>: {{ $m->mensaje }}</br></br>
