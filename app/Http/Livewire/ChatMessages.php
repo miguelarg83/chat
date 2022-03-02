@@ -16,18 +16,17 @@ use Livewire\Component;
 
 class ChatMessages extends Component
 {
-    public User $user; // Objeto $user que recibirá todos los atributos del usuario autenticado en el mount() : $this->user=auth()->user();
+    public $user; // Objeto $user que recibirá todos los atributos del usuario autenticado en el mount() : $this->user=auth()->user();
     public $mensajes;
     public $mensaje;
     public $mensajePrivado;
     public $usuarios=[];
-    public User $usuarioReceptor; // Objeto que recibirá al usuario junto con sus imágenes cuando abrimos un privado. 
+    public $usuarioReceptor; // Objeto que recibirá al usuario junto con sus imágenes cuando abrimos un privado. 
 
     //protected $listeners=['echo:msn,MensajePublico'=>'mensajeTodos'];
 
     public function mount()
     {
-        session()->forget('receptor');
         $this->user=auth()->user();
         $this->mensajes=Message::with('user.images')->latest()->take(50)->get()->reverse(); 
         // Coge los 50 registros más nuevos y los mostramos a la inversa de como los obtenemos de la BD.
