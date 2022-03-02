@@ -18,7 +18,7 @@
                 @foreach(session('saludos') as $saludo)
                     <div class="mr-2 mt-1">
                         <img wire:click="eliminarSesion('{{ $saludo }}')" style="cursor:pointer;" class="mb-0.5"  width="10px" src="{{asset('imagenes/admin/eliminar.png')}}">
-                        <button wire:click="chatPrivado('{{ $saludo }}')" type="button" @if(session('receptor')!=null && session('receptor')==$saludo) class="btn btn-success" @elseif(session('naranjas')!=null && in_array($saludo,session('naranjas'))) class="btn btn-primary" @else class="btn btn-secondary" @endif>
+                        <button wire:click="chatPrivado('{{ $saludo }}')" type="button" @if(session('receptor')!='general' && session('receptor')==$saludo) class="btn btn-success" @elseif(session('naranjas')!=null && in_array($saludo,session('naranjas'))) class="btn btn-primary" @else class="btn btn-secondary" @endif>
                             {{ $saludo }} <span style="font-size:11px">@php if(session('typing')!=null && in_array($saludo,session('typing'))) echo "Escribiendo..."; @endphp</span><span class="badge bg-secondary">@if(session($saludo.'C')!=null) {{ session($saludo.'C') }} @endif</span>
                         </button>
                     </div>
@@ -37,7 +37,7 @@
                     </li>
                 @endforeach
             @else
-                @if(session(session('receptor'))!=null)
+                @if(session(session('receptor'))!='general')
                     @foreach(session(session('receptor')) as $mensajePrivado)
                         {{ $mensajePrivado }}</br></br>
                     @endforeach
