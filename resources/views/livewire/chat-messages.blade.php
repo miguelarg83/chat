@@ -37,7 +37,7 @@
                     </li>
                 @endforeach
             @else
-                @if(session(session('receptor'))!='general')
+                @if(session(session('receptor'))!=null)
                     @foreach(session(session('receptor')) as $mensajePrivado)
                         {{ $mensajePrivado }}</br></br>
                     @endforeach
