@@ -408,7 +408,7 @@ class ChatMessages extends Component
 
     public function render()
     {
-        $this->mensajes=Message::with('user.images')->latest()->take(50)->get()->reverse();
+        //$this->mensajes=Message::with('user.images')->latest()->take(50)->get()->reverse();
         return view('livewire.chat-messages');
     }
 }
