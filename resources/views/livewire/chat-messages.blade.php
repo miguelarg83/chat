@@ -37,7 +37,6 @@
                     </li>
                 @endforeach
             @else
-                {{-- @php $this->mensajes=[]; @endphp --}}
                 @if(session(session('receptor'))!=null)
                     @foreach(session(session('receptor')) as $mensajePrivado)
                         {{ $mensajePrivado }}</br></br>
@@ -78,7 +77,7 @@
                 <form wire:submit.prevent="submit" class="form-inline">
                     <div class="form-group mb-2 w-100">
                         {{-- .defer se utiliza para que no se actualicen en vivo los datos mientras voy escribiendo en el input --}}
-                        <input name="mensaje" :key="'mensaje'" wire:model.debounce="mensaje" type="text" autocomplete="off" class="form-control w-100" placeholder="Mensaje">
+                        <input :key="'mensaje'" wire:model.debounce="mensaje" type="text" autocomplete="off" class="form-control w-100" placeholder="Mensaje">
                     </div>
                     <button type="submit" class="btn btn-primary mb-2">Enviar</button>
                 </form>
@@ -90,7 +89,7 @@
             <div class="col-9 col-lg-7 p-2 mt-2">
                 <form wire:submit.prevent="submitPrivado" class="form-inline">
                     <div class="form-group mb-2 w-100">
-                        <input name="mensajePrivado" :key="'mensajePrivado'" wire:model.debounce="mensajePrivado" type="text" autocomplete="off" class="form-control w-100" placeholder="Mensaje Privado">
+                        <input :key="'mensajePrivado'" wire:model.debounce="mensajePrivado" type="text" autocomplete="off" class="form-control w-100" placeholder="Mensaje Privado">
                     </div>
                     <button type="submitPrivado" class="btn btn-primary mb-2">Enviar</button>
                 </form>
