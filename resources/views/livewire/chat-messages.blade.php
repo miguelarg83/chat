@@ -71,7 +71,7 @@
     </div>
 
     {{-- Muestra el formulario de envío de mensaje tanto publico como privado --}}
-    @unless(session('receptor')!=null)
+    @unless(session('receptor')!='general')
         <div class="row justify-content-center">
             <div class="col-9 col-lg-7 p-2 mt-2">
                 <form wire:submit.prevent="submit" class="form-inline">
