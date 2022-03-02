@@ -113,9 +113,7 @@ class ChatMessages extends Component
 
     public function chatGeneral()
     {
-        if(session('receptor')!=null)
-            //session()->forget('receptor');
-            session(['receptor'=>'general']);
+        session(['receptor'=>'general']);
     }
 
     // Cuando recibo un mensaje privado de alguien.
